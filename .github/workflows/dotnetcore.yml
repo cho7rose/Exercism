@@ -18,8 +18,9 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Install dependencies
-      run: dotnet restore .\DiffieHellman\Tests\
+      working-directory: .\DiffieHellman\Tests\
+      run: dotnet restore
     - name: Build
-      run: dotnet build .\DiffieHellman\Tests\ --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore
     - name: Test
-      run: dotnet test .\DiffieHellman\Tests\ --no-restore --verbosity normal
+      run: dotnet test --no-restore --verbosity normal
