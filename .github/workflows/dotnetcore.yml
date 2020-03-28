@@ -21,6 +21,8 @@ jobs:
       working-directory: ./DiffieHellman/Tests/
       run: dotnet restore
     - name: Build
+      working-directory: ./DiffieHellman/Tests/
       run: dotnet build --configuration Release --no-restore
     - name: Test
+      working-directory: ./DiffieHellman/Tests/
       run: dotnet test --no-restore --verbosity normal
