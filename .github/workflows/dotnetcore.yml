@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Install dependencies
-      working-directory: .\DiffieHellman\Tests\
+      working-directory: ./DiffieHellman/Tests/
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
