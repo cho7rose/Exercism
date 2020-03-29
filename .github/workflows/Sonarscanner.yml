@@ -27,7 +27,7 @@ jobs:
       run: dotnet tool install --global dotnet-sonarscanner
       
     - name: Start sonarscanner
-      run: dotnet sonarscanner begin /k:"cho7rose_Exercism" /d:sonar.host.url=sonarcloud.io /d:sonar.login="cd7cdc7fee9c8992b3ab1a85985e731e9b561149" /o:"cho7rose"
+      run: dotnet sonarscanner begin /k:"cho7rose_Exercism" /d:sonar.host.url=sonarcloud.io /d:sonar.login="${{ sonarcloud_login }}" /o:"cho7rose"
         
     - name: Build with sonarscanner
       working-directory: ./DiffieHellman/Tests/    
