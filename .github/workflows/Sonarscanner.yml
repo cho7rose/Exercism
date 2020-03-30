@@ -42,5 +42,6 @@ jobs:
       working-directory: ./DiffieHellman/Tests/    
       run: dotnet build --configuration Release --no-restore ../DiffieHellman.sln -v n
     
-    - name: Sonarscanner end 
+    - name: Sonarscanner end
+      working-directory: ./DiffieHellman/Tests/
       run: dotnet sonarscanner end /d:sonar.login="${{ secrets.sonarcloud_login }}"
