@@ -21,6 +21,9 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+      with:
+        version: '2.1.700'
+    - run: dotnet --info
 
     # Runs a single command using the runners shell
     - name: Install sonarscanner
