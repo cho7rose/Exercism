@@ -38,4 +38,4 @@ jobs:
       run: dotnet build --configuration Release --no-restore ../DiffieHellman.sln -v n
     
     - name: Sonarscanner end 
-      run: dotnet sonarscanner end /d:sonar.login="${{ secrets.sonarcloud_login }}"
+      run: dotnet sonarscanner end /d:sonar.login="${{ secrets.sonarcloud_login }}" /d:sonar.verbose=true
