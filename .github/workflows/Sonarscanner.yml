@@ -48,3 +48,5 @@ jobs:
     - name: Sonarscanner end
       working-directory: ./DiffieHellman/Tests/
       run: dotnet sonarscanner end /d:sonar.login="${{ secrets.sonarcloud_login }}"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
