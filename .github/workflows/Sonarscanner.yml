@@ -38,4 +38,4 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     
     - name: Sonarscanner end 
-      run: dotnet sonarscanner end 
+      run: dotnet sonarscanner end /d:sonar.login="${{ secrets.sonarcloud_login }}"
