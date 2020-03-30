@@ -24,7 +24,7 @@ jobs:
 
     - uses: actions/setup-dotnet@v1
       with:
-        version: '2.1.700'        
+        dotnet-version: '2.1.700'        
     - run: dotnet --info
 
     # Runs a single command using the runners shell
