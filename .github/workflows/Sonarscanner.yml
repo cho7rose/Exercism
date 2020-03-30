@@ -32,6 +32,7 @@ jobs:
       run: dotnet tool install --global dotnet-sonarscanner
       
     - name: Start sonarscanner
+      working-directory: ./DiffieHellman/Tests/
       run: dotnet sonarscanner begin /k:"cho7rose_Exercism" /d:sonar.host.url=https://sonarcloud.io /d:sonar.login="${{ secrets.sonarcloud_login }}" /o:"cho7rose" /d:sonar.verbose=true
     
     - name: Install dependencies
