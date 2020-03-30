@@ -28,7 +28,11 @@ jobs:
       
     - name: Start sonarscanner
       run: dotnet sonarscanner begin /k:"cho7rose_Exercism" /d:sonar.host.url=https://sonarcloud.io /d:sonar.login="${{ secrets.sonarcloud_login }}" /o:"cho7rose"
-        
+    
+    - name: Install dependencies
+      working-directory: ./DiffieHellman/Tests/
+      run: dotnet restore
+
     - name: Build with sonarscanner
       working-directory: ./DiffieHellman/Tests/    
       run: dotnet build --configuration Release --no-restore
